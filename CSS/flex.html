@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A demonstration of CSS flexbox layout" />
+    <meta name="keywords" content="CSS, flexbox, layout" />
+    <meta name="author" content="ocean academy" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        background-color: antiquewhite;
+      }
+
+      .flex-item {
+        display: block;
+        height: 100px;
+        width: 100px;
+        background-color: black;
+        color: white;
+        /* margin-block: 10px; */
+      }
+    </style>
+  </head>
+  <body>
+    <main class="flex-container">
+      <div class="flex-item">flex-item1</div>
+      <div class="flex-item">flex-item2</div>
+      <div class="flex-item">flex-item3</div>
+    </main>
+  </body>
+</html>
