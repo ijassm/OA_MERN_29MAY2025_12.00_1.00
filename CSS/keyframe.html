@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div.box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation: mymove 1s alternate linear infinite;
+      }
+
+      @keyframes mymove {
+        0% {
+          top: 0px;
+          left: 0px;
+        }
+        25% {
+          top: 0px;
+          left: 200px;
+        }
+        75% {
+          top: 200px;
+          left: 200px;
+        }
+        100% {
+          top: 200px;
+          left: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The @keyframes Rule</h1>
+
+    <div class="box"></div>
+  </body>
+</html>

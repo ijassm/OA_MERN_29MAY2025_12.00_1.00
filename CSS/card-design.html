@@ -40,7 +40,7 @@
       }
 
       .flex-item {
-        max-width: 360px;
+        flex-basis: calc(100% / 4.5);
         background-color: white;
       }
 
@@ -79,9 +79,22 @@
         color: white;
       }
 
+      @media (max-width: 1200px) {
+        .flex-item {
+          flex-basis: calc(100% / 3.5);
+        }
+      }
+
       @media (max-width: 800px) {
-        body {
-          background-color: antiquewhite;
+        .flex-item {
+          flex-basis: calc(100% / 2.5);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .flex-item {
+          max-width: 380px;
+          flex-basis: 100%;
         }
       }
     </style>
@@ -89,6 +102,40 @@
   <body>
     <header class="title">Responsive Card Design</header>
     <main class="flex-container max-width">
+      <section class="flex-item">
+        <img
+          class="image"
+          src="https://media.istockphoto.com/id/472899538/photo/downtown-cleveland-hotel-entrance-and-waiting-taxi-cab.jpg?s=612x612&w=0&k=20&c=rz-WSe_6gKfkID6EL9yxCdN_UIMkXUBsr67884j-X9o="
+          alt="hotel"
+        />
+        <article class="content">
+          <h2 class="title">Accord</h2>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            velit impedit autem. In suscipit assumenda velit cumque distinctio,
+            natus tenetur vero eveniet iusto asperiores praesentium magnam quod
+            nulla veritatis! Reiciendis!
+          </p>
+          <button class="btn">Read More</button>
+        </article>
+      </section>
+      <section class="flex-item">
+        <img
+          class="image"
+          src="https://media.istockphoto.com/id/472899538/photo/downtown-cleveland-hotel-entrance-and-waiting-taxi-cab.jpg?s=612x612&w=0&k=20&c=rz-WSe_6gKfkID6EL9yxCdN_UIMkXUBsr67884j-X9o="
+          alt="hotel"
+        />
+        <article class="content">
+          <h2 class="title">Accord</h2>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            velit impedit autem. In suscipit assumenda velit cumque distinctio,
+            natus tenetur vero eveniet iusto asperiores praesentium magnam quod
+            nulla veritatis! Reiciendis!
+          </p>
+          <button class="btn">Read More</button>
+        </article>
+      </section>
       <section class="flex-item">
         <img
           class="image"
