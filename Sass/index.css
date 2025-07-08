@@ -1,0 +1,90 @@
+.center, .container5 .outerbox .innerbox, .container5 .outerbox, .container4 .outerbox .innerbox, .container4 .outerbox, .container3 .outerbox .innerbox, .container3 .outerbox, .container2 .outerbox .innerbox, .container2 .outerbox, .container1 .outerbox .innerbox, .container1 .outerbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 .outerbox {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+.container1 .outerbox .innerbox {
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+}
+
+.container2 .outerbox {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+.container2 .outerbox .innerbox {
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+}
+
+.container3 .outerbox {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+.container3 .outerbox .innerbox {
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+}
+
+.container4 .outerbox {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+.container4 .outerbox .innerbox {
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+}
+
+.container5 .outerbox {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+.container5 .outerbox .innerbox {
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+}
+
+.box1 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+}
+
+.box2 {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+
+.box3 {
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+}
+
+.box4 {
+  height: 400px;
+  width: 400px;
+  background-color: blue;
+}
+
+.box5 {
+  height: 500px;
+  width: 500px;
+  background-color: blue;
+}/*# sourceMappingURL=index.css.map */

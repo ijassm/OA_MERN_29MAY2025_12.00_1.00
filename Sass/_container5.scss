@@ -1,0 +1,10 @@
+.container5 {
+  .outerbox {
+    @include box($size * 2, $size * 2, $primary);
+    @extend .center;
+    .innerbox {
+      @include box($size, $size, $secondary);
+      @extend .center;
+    }
+  }
+}
