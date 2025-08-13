@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const students = [
+        {
+          name: "Arun Kumar",
+          age: 20,
+          email: "arun.kumar@example.com",
+          department: "Computer Science",
+          enrolled: true,
+          courses: ["Python", "C", "Java"],
+          grade: "A",
+          roll_number: "CS2025-001",
+        },
+        {
+          name: "Priya Lakshmi",
+          age: 21,
+          email: "priya.lakshmi@example.com",
+          department: "Information Technology",
+          enrolled: true,
+          courses: ["JavaScript", "React", "Node.js"],
+          grade: "B+",
+          roll_number: "IT2025-002",
+        },
+        {
+          name: "Vignesh Raj",
+          age: 22,
+          email: "vignesh.raj@example.com",
+          department: "Mechanical Engineering",
+          enrolled: false,
+          courses: ["Thermodynamics", "Fluid Mechanics"],
+          grade: "B",
+          roll_number: "ME2025-003",
+        },
+        {
+          name: "Kavya Shree",
+          age: 20,
+          email: "kavya.shree@example.com",
+          department: "Electronics",
+          enrolled: true,
+          courses: ["Circuit Theory", "Microprocessors"],
+          grade: "A",
+          roll_number: "EC2025-004",
+        },
+        {
+          name: "Saran Kumar",
+          age: 23,
+          email: "saran.kumar@example.com",
+          department: "Civil Engineering",
+          enrolled: true,
+          courses: ["Structural Analysis", "Geotechnical Engineering"],
+          grade: "A-",
+          roll_number: "CE2025-005",
+        },
+        {
+          name: "Meena Devi",
+          age: 21,
+          email: "meena.devi@example.com",
+          department: "Computer Applications",
+          enrolled: false,
+          courses: ["Python", "Data Science"],
+          grade: "B+",
+          roll_number: "CA2025-006",
+        },
+        {
+          name: "Prakash R",
+          age: 22,
+          email: "prakash.r@example.com",
+          department: "Electrical Engineering",
+          enrolled: true,
+          courses: ["Power Systems", "Control Systems"],
+          grade: "B",
+          roll_number: "EE2025-007",
+        },
+        {
+          name: "Anitha Selvi",
+          age: 20,
+          email: "anitha.selvi@example.com",
+          department: "Biotechnology",
+          enrolled: true,
+          courses: ["Genetics", "Bioprocess Engineering"],
+          grade: "A",
+          roll_number: "BT2025-008",
+        },
+        {
+          name: "Manoj Kumar",
+          age: 21,
+          email: "manoj.kumar@example.com",
+          department: "Computer Science",
+          enrolled: true,
+          courses: ["Java", "Machine Learning"],
+          grade: "A+",
+          roll_number: "CS2025-009",
+        },
+        {
+          name: "Deepa Rani",
+          age: 22,
+          email: "deepa.rani@example.com",
+          department: "Information Technology",
+          enrolled: false,
+          courses: ["HTML", "CSS", "Bootstrap"],
+          grade: "B",
+          roll_number: "IT2025-010",
+        },
+      ];
+
+      //   console.log(student.name);
+      //   console.log(student.age);
+      //   console.log(student["name"]);
+      //   console.log(student["age"]);
+
+      const roll_number = prompt("Enter roll number to get details");
+      let foundStudent = false;
+
+      for (let i of students) {
+        if (i.roll_number === roll_number) {
+          foundStudent = true;
+          console.log("✔ Data Found");
+          console.log(i);
+          break;
+        }
+      }
+
+      if (!foundStudent) console.log("❌Not Found");
+    </script>
+  </body>
+</html>

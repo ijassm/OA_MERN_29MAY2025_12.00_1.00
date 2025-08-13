@@ -9,9 +9,36 @@
     <script>
       const a = [1, 2, 3, 4, 5];
       const b = [6, 7, 8, 9, 10];
+      // Spread operator
       const c = [...a, ...b];
-      //   const c = a.concat(b);
-      console.log(c);
+
+      // const c = a.concat(b);
+      // console.log(a, "a");
+      // console.log(b, "b");
+
+      // for (let i = 0; i < a.length; i++) console.log(a[i]);
+      // for (let i of a) console.log(i);
+
+      // const c = [];
+      // for (let i of a) c.push(i);
+      // for (let i of b) c.push(i);
+
+      console.log(c, "c");
+      // console.log(c.length);
+
+      //❌ Don't use for in loop for array(it loops prototype properties also)
+      // Array.prototype.a = "dr";
+      // for (let i in a) console.log(i);
+
+      // Destructuring
+      // Rest operator
+      //   const [a1, a2, , , a3, ...rest] = c;
+
+      //   console.log(a1, "a1");
+      //   console.log(a2, "a2");
+      //   console.log(a3, "a3");
+      //   console.log(rest, "rest");
+      //
     </script>
   </body>
 </html>
