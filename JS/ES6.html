@@ -7,10 +7,10 @@
   </head>
   <body>
     <script>
-      const a = [1, 2, 3, 4, 5];
-      const b = [6, 7, 8, 9, 10];
+      // const a = [1, 2, 3, 4, 5];
+      // const b = [6, 7, 8, 9, 10];
       // Spread operator
-      const c = [...a, ...b];
+      // const c = [...a, ...b];
 
       // const c = a.concat(b);
       // console.log(a, "a");
@@ -23,7 +23,7 @@
       // for (let i of a) c.push(i);
       // for (let i of b) c.push(i);
 
-      console.log(c, "c");
+      // console.log(c, "c");
       // console.log(c.length);
 
       //❌ Don't use for in loop for array(it loops prototype properties also)
@@ -38,7 +38,36 @@
       //   console.log(a2, "a2");
       //   console.log(a3, "a3");
       //   console.log(rest, "rest");
-      //
+
+      const address = {
+        street: "123 Main St",
+        city: "Anytown",
+        state: "CA",
+        zip: "12345",
+      };
+
+      const student = {
+        name: "Arun Kumar",
+        age: 20,
+        email: "arun.kumar@example.com",
+        department: "Computer Science",
+        enrolled: true,
+        courses: ["Python", "C", "Java"],
+        grade: "A",
+        roll_number: "CS2025-001",
+        address,
+      };
+
+      // student.address = address;
+      // student.street = address.street;
+      // student.city = address.city;
+      // student.state = address.state;
+      // student.zip = address.zip;
+
+      address.city = "pondicherry";
+
+      console.log(student, "student");
+      console.log(address, "address");
     </script>
   </body>
 </html>
