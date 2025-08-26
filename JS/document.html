@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const doc = document;
+      const head = doc.head;
+      const body = doc.body;
+      head.getElementsByTagName("title")[0].textContent = "New Document Title";
+
+      const h1 = doc.createElement("h1");
+      const p = doc.createElement("p");
+
+      h1.textContent = "Hello World";
+      p.textContent = "This is a paragraph.";
+      //   h1.innerHTML = "<b>Hello World</b>";
+
+      h1.style.color = "blue";
+      p.style.fontSize = "20px";
+
+      body.append(h1, p);
+      // body.appendChild(h1);
+
+      console.log(h1);
+
+      console.log(head);
+      console.log(body);
+    </script>
+  </body>
+</html>
