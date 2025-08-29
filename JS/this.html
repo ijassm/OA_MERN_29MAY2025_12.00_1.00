@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Awesome 👍 This is one of the most common confusions in JS.
+      // Here’s a rule-of-thumb guide with examples:
+
+      // 🔹 When to use Arrow Functions (=>)
+
+      // ✅ Use when you want this to stay the same as outer scope.
+
+      // Callbacks inside methods
+
+      function Timer() {
+        this.seconds = 0;
+        setInterval(() => {
+          this.seconds++; // arrow inherits "this" = Timer
+          console.log(this.seconds);
+        }, 1000);
+      }
+      new Timer();
+
+      // Array methods / functional style
+
+      const numbers = [1, 2, 3];
+      const doubled = numbers.map((n) => n * 2);
+      console.log(doubled); // [2, 4, 6]
+
+      // Short inline functions
+
+      const add = (a, b) => a + b;
+
+      // 🚫 Don’t use arrows if you need this to change with .call(), .apply(), .bind(), or event listeners.
+
+      // 🔹 When to use Normal Functions (function)
+
+      // ✅ Use when you want this to be dynamic or you need access to special arguments.
+
+      // Methods on objects
+
+      const obj = {
+        name: "Alice",
+        greet: function () {
+          console.log("Hi, I'm " + this.name);
+        },
+      };
+      obj.greet(); // "Hi, I'm Alice"
+
+      // With .call, .apply, .bind
+
+      function sayHi() {
+        console.log("Hi, I'm " + this.name);
+      }
+      sayHi.call({ name: "Bob" }); // "Hi, I'm Bob"
+
+      // Event listeners (in most cases)
+
+      button.addEventListener("click", function () {
+        console.log("Clicked:", this); // this = button element
+      });
+
+      //   (If you used an arrow here, this would not be the button!)
+
+      //   When you need arguments object
+
+      function sum() {
+        return Array.from(arguments).reduce((a, b) => a + b, 0);
+      }
+      console.log(sum(1, 2, 3, 4)); // 10
+
+      //   (Arrow functions don’t have arguments.)
+    </script>
+  </body>
+</html>
