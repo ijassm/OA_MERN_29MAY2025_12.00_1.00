@@ -17,11 +17,15 @@ doc.querySelector("#taskInput").addEventListener("keydown", (event) => {
 
 const addTask = () => {
     const task = doc.querySelector("#taskInput").value;
-    const newTaskUI = taskUI(task)
-    const taskList = doc.querySelector("#taskList");
-    taskList.innerHTML += newTaskUI
-    clearInput();
-    console.log("✅ New Task Added : ", task);
+    if (task.length > 0) {
+        const newTaskUI = taskUI(task)
+        const taskList = doc.querySelector("#taskList");
+        taskList.innerHTML += newTaskUI
+        clearInput();
+        console.log("✅ New Task Added : ", task);
+    } else {
+        alert("Task is required")
+    }
 }
 
 
