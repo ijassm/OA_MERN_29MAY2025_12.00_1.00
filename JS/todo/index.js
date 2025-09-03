@@ -19,6 +19,8 @@ const addTask = () => {
     const task = doc.querySelector("#taskInput").value;
     if (task.length > 0) {
         const newTaskUI = taskUI(task)
+        console.log(newTaskUI);
+
         const taskList = doc.querySelector("#taskList");
         taskList.innerHTML += newTaskUI
         clearInput();
@@ -58,12 +60,12 @@ const editTask = (id) => {
 
 
 const taskUI = (value) => {
-    const id = _id++;
-    return `<li class="task" id="task_${id}">
-          <input id="${id}" type="text" readonly value="${value.toString()}" />
+    _id++;
+    return `<li class="task" id="task_${_id}">
+          <input id="${_id}" type="text" readonly value="${value.toString()}" />
           <div class="btns">
-            <button class="edit" onclick="editTask(${id})">Edit</button>
-            <button class="delete" onclick="deleteTask(${id})">Delete</button>
+            <button class="edit" onclick="editTask(${_id})">Edit</button>
+            <button class="delete" onclick="deleteTask(${_id})">Delete</button>
           </div>
         </li>`
 }

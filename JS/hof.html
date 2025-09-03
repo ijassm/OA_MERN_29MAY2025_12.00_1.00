@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      Array.prototype.myMap = function (func) {
+        const result = [];
+        for (let i of this) result.push(func(i));
+        return result;
+      };
+
+      const a = [1, 4, 6, 8, 9, 3];
+
+      //   function double(arr) {
+      //     const result = [];
+      //     for (let i of arr) result.push(i * 2);
+      //     return result;
+      //   }
+
+      //   function triple(arr) {
+      //     const result = [];
+      //     for (let i of arr) result.push(i * 3);
+      //     return result;
+      //   }
+
+      //   function quandruple(arr) {
+      //     const result = [];
+      //     for (let i of arr) result.push(i * 4);
+      //     return result;
+      //   }
+
+      //   console.log(double(a));
+      //   console.log(triple(a));
+      //   console.log(quandruple(a));
+
+      //   function myMap(arr, func) {
+      //     const result = [];
+      //     for (let i of arr) result.push(func(i));
+      //     return result;
+      //   }
+
+      //   console.log(a.map((i) => i * 2));
+      //   console.log(a.map((i) => i * 3));
+      //   console.log(a.map((i) => i * 4));
+      //   console.log(myMap(a, (i) => i * 2));
+      //   console.log(myMap(a, (i) => i * 3));
+      //   console.log(myMap(a, (i) => i * 4));
+    </script>
+  </body>
+</html>
